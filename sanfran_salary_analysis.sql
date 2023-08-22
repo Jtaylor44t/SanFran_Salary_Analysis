@@ -4,7 +4,7 @@ SELECT * FROM salaries;
 -- Showing only the EmployeeName and JobTitle column.
 SELECT
 	EmployeeName,
-    JobTitle
+    	JobTitle
 FROM
 	salaries;
 
@@ -28,7 +28,7 @@ FROM
 -- Showing the job title and overtime pay for all employees with overtime pay greater than 50k. 
 SELECT
 	JobTitle,
-    OvertimePay
+    	OvertimePay
 FROM
 	salaries
 WHERE
@@ -47,7 +47,7 @@ FROM
 -- Displaying the top 10 highest paid employees
 SELECT 
 	EmployeeName,
-    TotalPay
+    	TotalPay
 FROM
 	salaries
 ORDER BY TotalPay DESC
@@ -58,7 +58,7 @@ LIMIT 10;
 -- Showing the average of BasePay, OvertimePay, and OtherPay combined for each employee 
 SELECT
 	EmployeeName,
-    (BasePay + OvertimePay + OtherPay)/3 AS avg_of_bp_op_otherpay
+    	(BasePay + OvertimePay + OtherPay)/3 AS avg_of_bp_op_otherpay
 FROM
 	salaries;
 -- It looks like NATHANIEL FORD averages $189,198 with base, overtime, and other pay.
@@ -67,7 +67,7 @@ FROM
 -- Showing all employees with manager titles. 
 SELECT
 	COUNT(EmployeeName),
-    JobTitle
+   	JobTitle
 FROM 
 	salaries
 WHERE
@@ -78,7 +78,7 @@ WHERE
 -- Showing all employees with non manager titles. 
 SELECT
 	COUNT(EmployeeName),
-    JobTitle
+    	JobTitle
 FROM
 	Salaries
 WHERE JobTitle != 'Manager';
@@ -116,7 +116,7 @@ ORDER BY TotalPayBenefits DESC;
 -- Show all job titles with an average base pay of at least 100k and order them by the average base pay in descending order. 
 SELECT 
 	JobTitle,
-    avg(BasePay) AS avg_base_pay
+    	avg(BasePay) AS avg_base_pay
 FROM
 	salaries
 GROUP BY JobTitle
